@@ -1,0 +1,290 @@
+/* BASIC RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #111a2c;
+    border-bottom: 1px solid #26344a;
+}
+
+.navbar h2 {
+    color: #38e6b0;
+    font-size: 23px;
+}
+
+.navbar span {
+    color: #8b9bb4;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 680px;
+    margin: 55px auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tag {
+    color: #38e6b0;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.heading h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #9aa9bd;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ANALYZER CARD */
+
+.analyzer-card {
+    background: #141f33;
+    padding: 30px;
+    border: 1px solid #293b54;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+}
+
+.analyzer-card label {
+    display: block;
+    margin-bottom: 12px;
+    color: #dce5f2;
+    font-size: 14px;
+}
+
+/* PASSWORD INPUT */
+
+.password-box {
+    display: flex;
+    gap: 8px;
+}
+
+.password-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    background: #0b1424;
+    border: 1px solid #344761;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.password-box input:focus {
+    border-color: #38e6b0;
+}
+
+.password-box button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#togglePassword {
+    background: #20364b;
+    color: #38e6b0;
+}
+
+#clearPassword {
+    background: #38212b;
+    color: #ff7777;
+}
+
+.password-box button:hover {
+    opacity: 0.8;
+}
+
+/* STRENGTH METER */
+
+.strength-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 25px;
+    color: #b9c6d8;
+    font-size: 13px;
+}
+
+#strengthText {
+    font-weight: bold;
+}
+
+.strength-bar {
+    width: 100%;
+    height: 9px;
+    background: #29364a;
+    border-radius: 10px;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+#strengthFill {
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* ANALYSIS RESULTS */
+
+.results {
+    margin-top: 30px;
+    padding: 20px;
+    background: #0e1829;
+    border-radius: 10px;
+}
+
+.results h3,
+.suggestions h3,
+.allowed-box h3 {
+    color: #38e6b0;
+    margin-bottom: 16px;
+    font-size: 17px;
+}
+
+.results p {
+    color: #c1ccdc;
+    padding: 10px 0;
+    border-bottom: 1px solid #26344a;
+    font-size: 14px;
+}
+
+/* ALLOWED SYMBOLS */
+
+.allowed-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #0e1829;
+    border-radius: 10px;
+}
+
+.symbols {
+    color: #38e6b0;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.allowed-box p {
+    color: #9aa9bd;
+    font-size: 12px;
+}
+
+/* SUGGESTIONS */
+
+.suggestions {
+    margin-top: 20px;
+    padding: 20px;
+    background: #0e1829;
+    border-radius: 10px;
+}
+
+.suggestions ul {
+    padding-left: 20px;
+    color: #aab8ca;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+/* PRIVACY NOTE */
+
+.privacy-note {
+    color: #8291a7;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #8291a7;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .navbar h2 {
+        font-size: 18px;
+    }
+
+    .navbar span {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        margin: 35px auto;
+    }
+
+    .heading h1 {
+        font-size: 27px;
+    }
+
+    .analyzer-card {
+        padding: 18px;
+    }
+
+    .password-box {
+        flex-wrap: wrap;
+    }
+
+    .password-box input {
+        flex-basis: 100%;
+    }
+
+    .password-box button {
+        flex: 1;
+    }
+
+    .symbols {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+}

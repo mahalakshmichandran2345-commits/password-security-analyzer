@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Security Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h2>🛡 SecureCheck</h2>
+        <span>CYBER SECURITY TOOL</span>
+    </nav>
+
+    <main class="container">
+
+        <div class="heading">
+            <p class="tag">PASSWORD PROTECTION TOOL</p>
+            <h1>Password Security Analyzer</h1>
+            <p class="subtitle">
+                Analyze your password strength and improve your security.
+            </p>
+        </div>
+
+        <section class="analyzer-card">
+
+            <label for="password">Enter Your Password</label>
+
+            <div class="password-box">
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter a sample password"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+
+                <button id="togglePassword" type="button">
+                    Show
+                </button>
+
+                <button id="clearPassword" type="button">
+                    Clear
+                </button>
+            </div>
+
+            <div class="strength-heading">
+                <span>Strength Level</span>
+                <span id="strengthText">Not Analyzed</span>
+            </div>
+
+            <div class="strength-bar">
+                <div id="strengthFill"></div>
+            </div>
+
+            <div class="results">
+                <h3>Security Analysis</h3>
+
+                <p id="lengthCheck">Length: Not checked</p>
+                <p id="upperCheck">Uppercase: Not checked</p>
+                <p id="lowerCheck">Lowercase: Not checked</p>
+                <p id="numberCheck">Numbers: Not checked</p>
+                <p id="symbolCheck">Allowed Symbols: Not checked</p>
+                <p id="invalidCheck">Invalid Symbols: Not checked</p>
+            </div>
+
+            <div class="allowed-box">
+                <h3>Allowed Special Symbols</h3>
+                <div class="symbols">
+                    @ # $ _ &amp; - + * ! ?
+                </div>
+                <p>Only these special symbols are accepted.</p>
+            </div>
+
+            <div class="suggestions">
+                <h3>Security Suggestions</h3>
+                <ul id="suggestionText">
+                    <li>Your suggestions will appear here.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <p class="privacy-note">
+            🔒 Your password is analyzed locally in your browser.
+            It is not uploaded or stored.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>SecureCheck | Password Security Analyzer</p>
+        <p>Built with HTML, CSS and JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
